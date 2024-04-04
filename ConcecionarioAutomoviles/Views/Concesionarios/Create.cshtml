@@ -1,0 +1,48 @@
+﻿@model ConcecionarioAutomoviles.Models.Concesionario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Concesionario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdConcesionario" class="control-label"></label>
+                <input asp-for="IdConcesionario" class="form-control" />
+                <span asp-validation-for="IdConcesionario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreConcesionario" class="control-label"></label>
+                <input asp-for="NombreConcesionario" class="form-control" />
+                <span asp-validation-for="NombreConcesionario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DomicilioConcesionario" class="control-label"></label>
+                <input asp-for="DomicilioConcesionario" class="form-control" />
+                <span asp-validation-for="DomicilioConcesionario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nif" class="control-label"></label>
+                <input asp-for="Nif" class="form-control" />
+                <span asp-validation-for="Nif" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
