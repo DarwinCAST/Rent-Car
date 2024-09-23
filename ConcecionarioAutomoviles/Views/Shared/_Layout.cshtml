@@ -7,11 +7,30 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ConcecionarioAutomoviles.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
     <style>
         #li-nav{
             display: flex;
             justify-content: flex-end;
         }
+
+        .card img{
+            width: 100%;
+            height: 50%;
+        }
+        
+        .row{
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+      
+        a{
+            font-family: Moderustic;
+            font-weight: bold;
+        }
+        
     </style>
 </head>
 <body>
@@ -24,7 +43,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">CarSolutions</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">H Rent/car</a>
                         </li>
                     </ul>
 
@@ -51,11 +70,18 @@
         
 
     </header>
-    <div class="container">
+   
         <main role="main" class="pb-3">
             @RenderBody()
+
+         
+
+          
+
+            
+
         </main>
-    </div>
+   
 
     <footer class="border-top footer text-muted">
         <div class="container">
