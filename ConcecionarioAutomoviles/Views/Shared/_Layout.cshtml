@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ConcecionarioAutomoviles.styles.css" asp-append-version="true" />
+    <style>
+        #li-nav{
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,8 +25,10 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">CarSolutions</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Concesionarios" asp-action="Index">Concesionarios</a>
                         </li>
+                    </ul>
+
+                    <ul id="li-nav" class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="AutoMovilesStocks" asp-action="Index">Automoviles</a>
                         </li>
@@ -30,20 +38,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Marcas" asp-action="Index">Marcas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Extras" asp-action="Index">Extras</a>
-                        </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a>
                         </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ServiciosOficiales" asp-action="Index">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ventas" asp-action="Index">Ventas</a>
-                        </li>
                     </ul>
+                   
                     <partial name="_LoginPartial" />
                 </div>
             </div>
