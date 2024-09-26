@@ -3,13 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CarSolutions</title>
+    <title>
+        @ViewData["Title"] - RentalGo</title>
+    <link rel="icon" href="~/images/rental-logo.png"/>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ConcecionarioAutomoviles.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link href="~/lib/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
     <style>
         #li-nav{
             display: flex;
@@ -35,36 +39,35 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div class="container-fluid">
-          <div class="Tamaño_imagen" >
-                    <img src="~/icono/carro.png" />
-          </div>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">H Rent/car</a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fs-5">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center fs-3" href="#">
+                    <img src="~/images/rental-logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top logo">
+                    RentalGo
+                </a>
 
-                    <ul id="li-nav" class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="AutoMovilesStocks" asp-action="Index">Automoviles</a>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" href="#">Reservaciones</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">Vehículos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Modeloes" asp-action="Index">Modelos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Marcas" asp-action="Index">Marcas</a>
-                        </li>
-                       
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a>
+                            <a class="nav-link" href="#">Empleados</a>
                         </li>
                     </ul>
-                   
-                    <partial name="_LoginPartial" />
-                </div>
+                    <!-- Right-aligned elements -->
+                    <div class="d-flex align-items-center">
+                        <a class="nav-link me-3" href="#"><i class="bi bi-person-circle me-2"></i>Iniciar Sesión</a>
+                        <a class="btn btn-success text-light" href="#">Registrarse</a>
+                    </div>
             </div>
         </nav>
         
@@ -83,9 +86,10 @@
         </main>
    
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-center">
         <div class="container">
-            &copy; 2024 - ConcecionarioAutomoviles - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 <img src="~/images/rental-logo.png" alt="Logo" width="5" height="5" class="d-inline-block  logo">
+            RentalGo. Todos los derechos reservados.
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

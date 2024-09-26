@@ -1,0 +1,203 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@400;700&family=Open+Sans+Condensed:ital,wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.car-card img {
+    width: 76%;
+    height: 171px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .car-card h5 {
+        margin-top: 15px;
+        font-size: 1.25rem;
+    }
+
+    .car-card p {
+        color: grey;
+    }
+
+    .car-card button {
+        margin-top: 10px;
+    }
+
+.blue-container {
+    background-color: rgba(217, 213, 216, 0.92);
+    padding: 40px;
+    margin-top: -15px;
+}
+
+    .blue-container h2 {
+        font-size: 2.5rem;
+        font-family: Rubik, sans-serif;
+        color: rgb(30, 29, 29);
+    }
+
+    .blue-container h5 {
+        font-size: 28px;
+        font-family: Rubik, sans-serif;
+        color: rgb(30, 29, 29);
+    }
+
+    .blue-container p {
+        font-size: 18px;
+        font-family: Rubik, sans-serif;
+        color: rgb(51, 51, 51);
+        margin-bottom: 3px;
+        margin-top: -7px;
+    }
+
+.btn-azul {
+    background-image: linear-gradient(180deg, #4196c6, #022f62);
+    color: white;
+    font-family: Rubik, sans-serif;
+    font-weight: 500;
+    border: none;
+    /* margin-top: 27px; */
+    /* margin-bottom: 27px; */
+    /* margin-top: -44px; */
+}
+
+.car2 {
+    margin-top: 54px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.hero {
+    display: flex;
+}
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: Rubik, sans-serif;
+        color: rgb(51, 51, 51);
+        margin-top: 103px;
+        text-align: left;
+    }
+
+        .hero h1 span {
+            background-size: 100% 20%;
+            background-repeat: repeat-x;
+            background-position: left 0% bottom 10%;
+        }
+
+    .hero p {
+        font-size: 22px;
+        margin-bottom: 30px;
+        font-family: Rubik, sans-serif;
+        color: rgb(51, 51, 51);
+        text-align: left;
+    }
+
+.tapered2 {
+    background-image: linear-gradient(181deg, rgb(1, 94, 234) 0%, rgb(0, 192, 250) 50%, transparent 54%, transparent 100%);
+}
+
+.btn:hover {
+    background: rgb(85, 85, 85);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.btn:hover {
+    background: rgb(85, 85, 85);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    text-align: center;
+}
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+/*seccion 3*/
+
+.contact-form h3 {
+    font-size: 2.5rem;
+    font-family: Rubik, sans-serif;
+    color: rgb(30, 29, 29);
+    /* margin-bottom: 0%; */
+    text-align: left;
+}
+
+.contact-form .form-control {
+    border-radius: 1rem;
+    width: 76%;
+}
+
+.contact-form .btnContact {
+    width: auto; /* Cambiado a 'auto' para el tamaño del botón */
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #2687bb;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    float: left; /* Alineado a la izquierda */
+    margin-bottom: 34px;
+}
+
+.form-group {
+    font-family: Rubik, sans-serif;
+}
+
+
+footer {
+    background-color: rgb(30 32 34);
+    font-family: Rubik, sans-serif;
+    color: white;
+    padding: 1rem;
+    font-size: 18px;
+}

@@ -1,6 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
+<link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
 
 <div class="text-center">
    
@@ -8,6 +9,102 @@
 
         @* Cartas de carros *@
 
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-left"> 
+                    <div class="col-md-6">
+                        <h1>Encuentra, reserva y alquila un auto <span class="tapered2">Fácilmente</span></h1>
+                        <p>Consigue un auto donde y cuando lo necesites.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="~/images/hero-car.png" alt="Auto"> <!-- Asegúrate de que la ruta de la imagen es correcta -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Segundo Container -->
+
+
+        <section class="blue-container">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Último Inventario</h2>
+                </div>
+                <div class="row">
+                    <!-- Primera fila de autos -->
+                    <div class="col-md-4 car-card">
+                        <img src="~/images/nissan.png" alt="Auto 1">
+                        <h5>Nissan Sentra</h5>
+                        <p>$50 USD x Día</p>
+                        <button class="btn btn-azul">Ver más</button>
+                    </div>
+                    <div class="col-md-4 car-card">
+                        <img src="~/images/honda.png" alt="Auto 2">
+                        <h5>Honda Accord Hybrid</h5>
+                        <p>$64 USD x Día</p>
+                        <button class="btn btn-azul">Ver más</button>
+                    </div>
+                    <div class="col-md-4 car-card">
+                        <img src="~/images/jeep.png" alt="Auto 3">
+                        <h5>Jeep Avenger</h5>
+                        <p>$78 USD x Día</p>
+                        <button class="btn btn-azul">Ver más</button>
+                    </div>
+
+                    <!-- Segunda fila de autos -->
+                    <div class="col-md-4 car-card car2">
+                        <img src="~/images/kia.png" alt="Auto 4">
+                        <h5>Kia Connect</h5>
+                        <p>$40 USD x Día</p>
+                        <button class="btn btn-azul">Ver más</button>
+                    </div>
+                    <div class="col-md-4 car-card car2">
+                        <img src="~/images/Mercedes.png" alt="Auto 5">
+                        <h5>Audi A6</h5>
+                        <p>$100 USD x Día</p>
+                        <button class="btn btn-azul">Ver más</button>
+                    </div>
+                    <div class="col-md-4 car-card car2">
+                        <img src="~/images/sedan.png" alt="Auto 6">
+                        <h5>Toyota Corolla</h5> 
+                        <p>$95 USD x Día</p>
+                        <button class="btn btn-azul">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container contact-form">
+            <form method="post">
+                <h3 class="mt-4">Déjanos un Mensaje</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <input type="text" name="txtName" class="form-control" placeholder="Tu Nombre *" required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" name="txtEmail" class="form-control" placeholder="Tu Correo Electrónico *" required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" name="txtPhone" class="form-control" placeholder="Tu Número de Teléfono *" required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Enviar Mensaje" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea name="txtMsg" class="form-control" placeholder="Tu Mensaje *" style="width: 80%; height: 158px;" required></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+@* 
         <div class="container">
             <div class="row">
                 <div class="col-4">
@@ -74,137 +171,6 @@
                 </div>
 
             </div>
-        </div>
+        </div> *@
     </main>
-     <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        /* Estilos para el header */
-        header {
-            background-color: #0d6efd;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        /* Estilos para el hero section */
-        .hero {
-            background: url('hero.jpg') center/cover no-repeat;
-            text-align: center;
-            color: #fff;
-            padding: 3rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Estilos para los botones */
-        .btn {
-            display: inline-block;
-            background: #333;
-            color: #fff;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #555;
-        }
-    </style> <style>
-                 /* Reset CSS */
-                 * {
-                     margin: 0;
-                     padding: 0;
-                     box-sizing: border-box;
-                 }
-
-                 /* Estilos generales */
-                 body {
-                     font-family: Arial, sans-serif;
-                     line-height: 1.6;
-                 }
-
-                 .container {
-                     width: 80%;
-                     margin: auto;
-                     overflow: hidden;
-                 }
-
-                 /* Estilos para el header */
-                 header {
-                     color: #fff;
-                     padding: 1rem;
-                     text-align: center;
-                 }
-
-                     header h1 {
-                         font-size: 2.5rem;
-                     }
-
-                 /* Estilos para el hero section */
-                 .hero {
-                     background: url('hero.jpg') center/cover no-repeat;
-                     text-align: center;
-                     color: #fff;
-                     padding: 3rem 0;
-                 }
-
-                     .hero h1 {
-                         font-size: 3rem;
-                         margin-bottom: 1rem;
-                     }
-
-                     .hero p {
-                         font-size: 1.2rem;
-                         margin-bottom: 2rem;
-                     }
-
-                 /* Estilos para los botones */
-                 .btn {
-                     display: inline-block;
-                     background: #333;
-                     color: #fff;
-                     padding: 0.8rem 2rem;
-                     text-decoration: none;
-                     border: none;
-                     border-radius: 5px;
-                     transition: background 0.3s ease;
-                 }
-
-                     .btn:hover {
-                         background: #555;
-                     }
-    </style>
-    
 </div>
