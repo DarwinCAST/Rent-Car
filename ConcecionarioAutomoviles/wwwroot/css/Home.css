@@ -19,10 +19,11 @@ body {
 }
 
 .car-card img {
-    width: 76%;
-    height: 171px;
-    object-fit: cover;
-    display: block;
+    width: 230px; /* Ajusta el ancho fijo en píxeles */
+    height: 121px; /* Mantiene la altura fija */
+    object-fit: cover; /* Para que la imagen se ajuste al tamaño sin deformarse */
+    display: block; /* Hace que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
 }
 
 .car-card {
