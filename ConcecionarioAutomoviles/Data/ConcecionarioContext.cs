@@ -225,6 +225,13 @@ public partial class ConcecionarioContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("nombreVendedor");
+
+            // Agregando datos iniciales (Seed Data)
+            entity.HasData(
+                new Vendedore { IdVendedor = 1, NombreVendedor = "Juan Pérez", Nif = "001-1234567-8", DomicilioVendedor = "Calle Principal #123" },
+                new Vendedore { IdVendedor = 2, NombreVendedor = "María Gómez", Nif = "002-2345678-9", DomicilioVendedor = "Avenida Central #456" },
+                new Vendedore { IdVendedor = 3, NombreVendedor = "Carlos Ramírez", Nif = "003-3456789-0", DomicilioVendedor = "Calle Secundaria #789" }
+            );
         });
 
         modelBuilder.Entity<Venta>(entity =>

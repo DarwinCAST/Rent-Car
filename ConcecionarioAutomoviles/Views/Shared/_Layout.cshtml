@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
     <link href="~/lib/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
     <style>
         #li-nav{
             display: flex;
@@ -42,7 +43,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white fs-5">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center fs-3" href="#">
+                <a class="navbar-brand d-flex align-items-center fs-3" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/rental-logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top logo">
                     RentalGo
                 </a>
@@ -53,20 +54,20 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Reservaciones</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Vehículos</a>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" asp-area="" asp-controller="Marcas" asp-action="Index">Vehículos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" asp-area="" asp-controller="Vendedores" asp-action="Index">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Clientes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Empleados</a>
+                            <a class="nav-link" asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a>
                         </li>
                     </ul>
                     <!-- Right-aligned elements -->
                     <div class="d-flex align-items-center">
-                        <a class="nav-link" href="#"><i class="bi bi-person-circle me-2"></i>Iniciar Sesión</a>
-                        <a class="btn btn-success text-light" href="#">Registrarse</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login"><i class="bi bi-person-circle me-2"></i>Iniciar Sesión</a>
+                        <a class="btn btn-success text-light" asp-area="" asp-controller="Home" asp-action="Registro">Registrarse</a>
                     </div>
             </div>
         </nav>

@@ -4,27 +4,70 @@
     ViewData["Title"] = "Index";
 }
 
+
+<style>
+    
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    thead th {
+        color: #fff;
+    }
+
+    .card {
+        border-radius: .5rem;
+    }
+
+    .table-scroll {
+        border-radius: .5rem;
+    }
+
+        .table-scroll table thead th {
+            font-size: 1.25rem;
+        }
+
+    thead {
+        top: 0;
+        position: sticky;
+    }
+</style>
 <h1>Vendedores</h1>
 
 <p>
     <a asp-action="Create">Crear vendedor</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
+<section class="intro">
+  <div class="bg-image h-100" style="background-color: #f5f7fa;">
+      <div class="mask d-flex align-items-center h-100">
+       <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+         <div class="card">
+        <div class="card-body p-0">
+      <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
+      <table class="table table-striped mb-0">
+         <thead style="background-color: #002d72;">
+                     <tr>
+           <th scope="col">
                 Nombre
             </th>
-            <th>
-                Cedula
-            </th>
-            <th>
+    <th scope="col">
+                                                    Cédula
+                                                </th>
+        <th scope="col">
                 Sector
             </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+                                                <th scope="col">
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -36,6 +79,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DomicilioVendedor)
             </td>
+                                                    <td>
+                                                        <a asp-action="Details" asp-route-id="@item.IdVendedor" class="view" title="View">
+                                                            <i class="bi bi-eye-fill"></i>
+                                                        </a>
+                                                        <a a asp-action="Details" asp-route-id="@item.IdVendedor" class="edit" title="Edit" data-toggle="tooltip">
+                                                            <i class="bi bi-vector-pen"></i>
+                                                        </a>
+                                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip">
+                                                            <i class="bi bi-trash3-fill"></i>
+                                                        </a>
+                                                    </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdVendedor">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.IdVendedor">Details</a> |
@@ -45,3 +99,11 @@
 }
     </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
