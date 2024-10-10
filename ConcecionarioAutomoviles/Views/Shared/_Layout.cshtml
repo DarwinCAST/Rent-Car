@@ -42,7 +42,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white fs-5">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center fs-3" href="#">
+                <a class="navbar-brand d-flex align-items-center fs-3" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/rental-logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top logo">
                     RentalGo
                 </a>
@@ -53,14 +53,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Reservaciones</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" href="#">Vehículos</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-3">
                             <a class="nav-link" href="#">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Empleados</a>
+                            <a class="nav-link" asp-area="" asp-controller="Vendedores" asp-action="Index">Vendedores</a>
                         </li>
                     </ul>
                     <!-- Right-aligned elements -->
