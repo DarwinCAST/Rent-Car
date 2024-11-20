@@ -4,23 +4,71 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Marcas</h1>
+<style>
+
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    thead th {
+        color: #fff;
+    }
+
+    .card {
+        border-radius: .5rem;
+    }
+
+    .table-scroll {
+        border-radius: .5rem;
+    }
+
+        .table-scroll table thead th {
+            font-size: 1.25rem;
+        }
+
+    thead {
+        top: 0;
+        position: sticky;
+    }
+
+    h2, p {
+        text-align: center;
+    }
+
+</style>
+
+
+<h2>Marcas</h2>
 
 <p>
-    <a asp-action="Create">Crear nueva marca</a>
+    <a asp-action="Create">Crear Marca</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdMarca)
-            </th>
-           
-            <th>
-                @Html.DisplayNameFor(model => model.NombreMarca)
-            </th>
-        </tr>
-    </thead>
+<section class="intro">
+    <div class="bg-image h-100" style="background-color: #f5f7fa;">
+        <div class="mask d-flex align-items-center h-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
+                                    <table class="table table-striped mb-0">
+                                        <thead style="background-color: #002d72;">
+                                            <tr>
+                                                <th scope="col">
+                                                    IDMarca
+                                                </th>
+                                                <th scope="col">
+                                                    Marca
+                                                </th>
+                                                <th scope="col">
+                                                </th>
+                                            </tr>
+                                        </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>

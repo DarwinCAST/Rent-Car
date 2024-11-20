@@ -4,41 +4,91 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Ventas</h1>
+<style>
+
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    thead th {
+        color: #fff;
+    }
+
+    .card {
+        border-radius: .5rem;
+    }
+
+    .table-scroll {
+        border-radius: .5rem;
+    }
+
+        .table-scroll table thead th {
+            font-size: 1.25rem;
+        }
+
+    thead {
+        top: 0;
+        position: sticky;
+    }
+
+    h2, p {
+        text-align: center;
+    }
+
+</style>
+
+
+<h2>Reporte de ventas</h2>
 
 <p>
-    <a asp-action="Create">Crear nueva venta</a>
+    <a asp-action="Create">Crear Reporte</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Precio venta
-            </th>
-            <th>
-                Modo de pago
-            </th>
-            <th>
-                Fecha de entrega
-            </th>
-            <th>
-                Matricula
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EsDeStock)
-            </th>
-            <th>
-                ID automovil
-            </th>
-            <th>
-                ID servicio
-            </th>
-            <th>
-                ID vendedor
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+<section class="intro">
+    <div class="bg-image h-100" style="background-color: #f5f7fa;">
+        <div class="mask d-flex align-items-center h-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
+                                    <table class="table table-striped mb-0">
+                                        <thead style="background-color: #002d72;">
+                                            <tr>
+                                                <th scope="col">
+                                                    Precio de venta
+                                                </th>
+                                                <th scope="col">
+                                                    Modo de pago
+                                                </th>
+                                                <th scope="col">
+                                                    Fecha
+                                                </th>
+                                                <th scope="col">
+                                                    Tipo de vehiculo
+                                                </th>
+                                                <th scope="col">
+                                                    Nuevo o Usado
+                                                </th>
+                                                <th scope="col">
+                                                    IDAuto
+                                                </th>
+                                                <th scope="col">
+                                                    Servicio
+                                                </th>
+                                                <th scope="col">
+                                                    IDVendedor
+                                                </th>
+                                               
+
+                                                <th scope="col">
+                                                </th>
+                                            </tr>
+                                        </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
